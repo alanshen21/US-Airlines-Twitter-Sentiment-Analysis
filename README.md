@@ -6,7 +6,7 @@ Evidence from U.S. Airlines during
 the Covid-19
 
 
-Abstract
+## Abstract
 
 
 This study examines the information
@@ -23,7 +23,7 @@ uninformed, our findings show that the daily firm-level Twitter sentiment
 contains information that is not reflected in stock prices.
 
 
-1. Introduction
+## Introduction
 
 
 
@@ -86,11 +86,11 @@ volume), or does Twitter sentiment follow the stock performance?
 
 
 
-2. Data
+## Data
 
 
 
-2.1 Training Tweets
+Training Tweets
 
 
 
@@ -105,11 +105,11 @@ United, US Airways, Virgin America) in 2015.
 Figure 1:
 Screenshot of the training tweets dataset
 
+![Screenshot](image/1.png)
 
 
 
-
-2.2 Sample Tweets
+Sample Tweets
 
 
 
@@ -124,28 +124,23 @@ NYSE: DAL, Delta Air Lines
 
 
 
-●       
-NASDAQ: UAL, United Airlines Holdings
+● NASDAQ: UAL, United Airlines Holdings
 
 
 
-●       
-NASDAQ: AAL, American Airlines Group
+● NASDAQ: AAL, American Airlines Group
 
 
 
-●       
-NYSE: LUV, Southwest Airlines
+● NYSE: LUV, Southwest Airlines
 
 
 
-●       
-NASDAQ: JBLU, JetBlue Airways
+● NASDAQ: JBLU, JetBlue Airways
 
 
 
-●       
-NYSE: SAVE, Spirit Airlines
+● NYSE: SAVE, Spirit Airlines
 
 
 
@@ -158,7 +153,7 @@ Using Twitter API, we extracted
 Figure 2:
 Screenshot of the extracted tweets dataset
 
-
+![Screenshot](image/2.png)
 
 
 
@@ -168,39 +163,32 @@ preprocess our tweets dataset. The preprocessing step eliminates the following:
 
 
 
-●       
-stopwords (i.e., 'the', 'a', 'and', 'how', etc.);
+● stopwords (i.e., 'the', 'a', 'and', 'how', etc.);
 
 
 
-●       
-tweets with a question mark - questions are not good indicators of
+● tweets with a question mark - questions are not good indicators of
 sentiment.
 
 
 
-●       
-Non-letters (including numbers, emojis, and punctuation);
+● Non-letters (including numbers, emojis, and punctuation);
 
 
 
-●       
-URL links;
+● URL links;
 
 
 
-●       
-accounts referenced using ‘@’ symbol;
+● accounts referenced using ‘@’ symbol;
 
 
 
-●       
-words less than three characters;
+● words less than three characters;
 
 
 
-●       
-retweets - we decided not to count the same tweet twice;
+● retweets - we decided not to count the same tweet twice;
 
 
 
@@ -216,11 +204,11 @@ including “stock”, “price”, and “Nasdaq”.
 Figure 2: Word cloud extracted from
 the tweets of each airline company
 
+![Image](image/wordcloud.png)
 
 
 
-
-2.3 Financial Data
+Financial Data
 
 
 
@@ -236,7 +224,6 @@ Screenshot of the extracted financial data
 
 
 
-
  
 
 
@@ -245,11 +232,11 @@ Screenshot of the extracted financial data
 
 
 
-3. Methodology
+## Methodology
 
 
 
-3.1 Model Training
+Model Training
 
 
 
@@ -266,9 +253,7 @@ negative, and neutral tweets.
 Figure 4:
 Sentiment breakdown of training data
 
-
-
-
+![Image](image/bar_chart.png)
 
 
 
@@ -281,7 +266,7 @@ Sentiment breakdown of training data
 Figure 5:
 Frequency distribution of top tokens
 
-
+![Image](image/tokens.png)
 
 
 
@@ -292,7 +277,7 @@ much training data, Naive Bayes models can be trained faster than other models.
 
 
 
-3.2 Testing Model Accuracy
+Testing Model Accuracy
 
 
 
@@ -314,7 +299,7 @@ performs well.
 Figure 6: ROC
 curve for MultinominalNB model
 
-
+![Image](image/roc.png)
 
 
 
@@ -332,7 +317,7 @@ data.
 Figure 7: Learning
 curve for MultinominalNB model
 
-
+![Image](image/f1.png)
 
 
 
@@ -350,8 +335,7 @@ follows:
 
 
 
-
-3.3 Textual Analysis on
+Textual Analysis on
 Sentiment
 
 
@@ -366,7 +350,7 @@ negative tweets are below.
 Figure 9:
 Frequency distribution of top tokens
 
-
+![Image](image/tokens2.png)
 
 
 
@@ -383,9 +367,7 @@ Average sentiment of each airline company
 
 
 
-
-
-3.4 Twitter Sentiment and
+Twitter Sentiment and
 Stock Market Movement
 
 
@@ -409,7 +391,7 @@ Figure 11: Daily
 sentiment of each airline company
 
 
-
+![Image](image/daily_sentiment.png)
 
 
  
@@ -423,7 +405,7 @@ sentiment of each airline company
 Figure 12: Daily
 sentiment change of each airline company
 
-
+![Image](image/daily_percent_change.png)
 
 
 
@@ -439,7 +421,7 @@ Figure 13:
 Rolling cumulative returns of each airline company
 
 
-
+![Image](image/cumulative_returns.png)
 
 
 
@@ -453,7 +435,7 @@ Rolling cumulative returns of each airline company
 Figure 14:
 Rolling daily returns of each airline company
 
-
+![Image](image/rolling_daily_returns.png)
 
 
 
@@ -467,8 +449,7 @@ sentiment and stock returns (the same day and the next day).
 
 
 
-4.
-Results
+## Results
 
 
 
@@ -502,7 +483,7 @@ Figure 15: OLS
 regression plots of the same day return
 
 
-
+![Image](image/ols.png)
 
 
 
@@ -566,7 +547,7 @@ stock prices.
 Figure 19: Word
 cloud of the classified sentiment
 
-
+![Image](image/wordcloud2.png)
 
 
 
@@ -574,8 +555,7 @@ cloud of the classified sentiment
 
 
 
-5.
-Conclusion
+## Conclusion
 
 
 
